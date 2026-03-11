@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+        .skills-section {
+            margin-top: 4rem;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .skill-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .skill-item i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--neon-cyan);
+        }
+        .skill-item img {
+            height: 2.5rem;
+            margin-bottom: 1rem;
+            object-fit: contain;
+        }
+        .skill-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--neon-cyan);
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.2);
+        }
+        @media (max-width: 900px) {
+            .about-content { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <nav>
+                <a href="index.html" class="logo text-gradient">&lt;Argha /&gt;</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About Me</a></li>
+                    <li><a href="certificates.html">Certificates</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-section fade-in">
+            <div class="container">
+                <h2 class="section-title">About <span class="text-gradient">Me</span></h2>
+                
+                <div class="about-content">
+                    <div class="about-image-wrapper glass-panel fade-in delay-1" style="padding: 1rem; border-radius: 20px; text-align: center;">
+                         <!-- We can reuse the profile picture here -->
+                        <img src="assets/profile_placeholder.png" alt="Argha - About" style="width: 100%; border-radius: 12px; filter: grayscale(20%) contrast(1.1); transition: 0.3s;">
+                    </div>
+                    
+                    <div class="about-text fade-in delay-2">
+                        <h3 style="font-size: 2rem; margin-bottom: 1rem; color: #fff;">Hello, I'm Argha</h3>
+                        <p>
+                            I am a passionate Software Engineer with a strong focus on <strong>Artificial Intelligence</strong> and <strong>Machine Learning</strong>. 
+                            My journey in tech started with a curiosity about how algorithms can mimic human intelligence, and it has evolved into a career dedicated to building scalable, intelligent systems.
+                        </p>
+                        <p>
+                            Through rigorous study and hands-on professional projects, I have developed expertise in deep learning, natural language processing, and modern web architectures.
+                            I believe in writing clean, maintainable code and building products that offer exceptional user experiences.
+                        </p>
+                        <p>
+                            When I'm not coding or training models, I enjoy contributing to open-source, reading about the latest tech trends, and experimenting with new frameworks.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="skills-section fade-in delay-3">
+                    <h3 style="font-size: 2rem; text-align: center; margin-bottom: 1rem;">My <span class="text-gradient">Arsenal</span></h3>
+                    <p style="text-align: center; color: var(--text-muted);">Languages, frameworks, and tools I use frequently.</p>
+                    
+                    <div class="skills-grid">
+                        <div class="skill-item glass-panel">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python">
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item glass-panel">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow">
+                            <span>TensorFlow</span>
+                        </div>
+                        <div class="skill-item glass-panel">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
+                            <span>SQL / DBs</span>
+                        </div>
+                        <div class="skill-item glass-panel">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript">
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item glass-panel">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React">
+                            <span>React</span>
+                        </div>
+                        <div class="skill-item glass-panel">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS">
+                            <span>AWS / Cloud</span>
+                        </div>
+                        <div class="skill-item glass-panel">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git">
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item glass-panel">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" alt="FastAPI">
+                            <span>FastAPI / REST</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2026 Argha. Designed with passion.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

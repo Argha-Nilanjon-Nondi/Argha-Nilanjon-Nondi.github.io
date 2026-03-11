@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .cert-card {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .cert-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .cert-card:hover::before {
+            opacity: 1;
+        }
+
+        .cert-logo {
+            height: 3rem;
+            margin-bottom: 1rem;
+            object-fit: contain;
+            object-position: left;
+            /* Invert filtering for some simpleicons if needed in dark mode, but here we supply colors */
+        }
+
+        /* Specific brand colors for logos */
+        .coursera-icon {
+            color: #0056D2;
+        }
+
+        .edx-icon {
+            color: #B20021;
+        }
+
+        .ibm-icon {
+            color: #0f62fe;
+        }
+
+        .cert-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .cert-issuer {
+            color: var(--neon-cyan);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cert-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+
+        .cert-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            color: var(--text-main);
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .cert-link:hover {
+            color: var(--neon-purple);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <nav>
+                <a href="index.html" class="logo text-gradient">&lt;Argha /&gt;</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="certificates.html" class="active">Certificates</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-section fade-in">
+            <div class="container">
+                <h2 class="section-title">My <span class="text-gradient">Certifications</span></h2>
+                <p style="text-align: center; color: var(--text-muted); max-width: 600px; margin: 0 auto;">
+                    Continuous learning is essential in tech. Here are some of the professional certifications I have
+                    earned from leading educational platforms and tech giants.
+                </p>
+
+                <div class="certificates-grid">
+                    <!-- Coursera -->
+                    <div class="cert-card glass-panel fade-in delay-1">
+                        <img src="assets/coursera_logo.svg"
+                            alt="Coursera" class="cert-logo">
+                        <div class="cert-issuer">University of Michigan</div>
+                        <h3 class="cert-title">Web Applications for Everybody Specialization</h3>
+                        <p class="cert-desc">Professional Certificate.</p>
+                        <a href="https://coursera.org/share/4b5e7255d4efeb0774ae352ededac567" target="_blank"
+                            class="cert-link">View Certificate <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="cert-card glass-panel fade-in delay-2">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Coursera-Logo_600x600.svg"
+                            alt="Coursera" class="cert-logo">
+                        <div class="cert-issuer">University of Michigan</div>
+                        <h3 class="cert-title">Python 3 Programming Specialization</h3>
+                        <p class="cert-desc">Course Certificate.</p>
+                        <a href="https://coursera.org/share/3a4472f97323e3aa3d2c54a096f5f064" target="_blank"
+                            class="cert-link">View Certificate <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="cert-card glass-panel fade-in delay-3">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Coursera-Logo_600x600.svg"
+                            alt="Coursera" class="cert-logo">
+                        <div class="cert-issuer">University of Alberta</div>
+                        <h3 class="cert-title">Software Design and Architecture Specialization</h3>
+                        <p class="cert-desc">Course Certificate.</p>
+                        <a href="https://coursera.org/share/e7bce66fba9dc261df6f69837be3416c" target="_blank"
+                            class="cert-link">View Certificate <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="cert-card glass-panel fade-in delay-1">
+                        <img src="assets/coursera_logo.svg"
+                            alt="Coursera" class="cert-logo">
+                        <div class="cert-issuer">University of Michigan</div>
+                        <h3 class="cert-title">Django for Everybody Specialization</h3>
+                        <p class="cert-desc">Course Certificate.</p>
+                        <a href="https://coursera.org/share/f5e96c2f98adbc47803a2ef41b77da8c" target="_blank"
+                            class="cert-link">View Certificate <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="cert-card glass-panel fade-in delay-2">
+                        <img src="assets/coursera_logo.svg"
+                            alt="Coursera" class="cert-logo">
+                        <div class="cert-issuer">University of Michigan</div>
+                        <h3 class="cert-title">Web Design for Everybody: Basics of Web Development & Coding
+                            Specialization</h3>
+                        <p class="cert-desc">Course Certificate.</p>
+                        <a href="https://coursera.org/share/d0ff5f3c13ca75f70b5fd1374b632ef4" target="_blank"
+                            class="cert-link">View Certificate <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- FutureLearn -->
+                    <div class="cert-card glass-panel fade-in delay-3">
+                        <img src="assets/futurelearn_logo.svg" alt="FutureLearn" class="cert-logo">
+                        <div class="cert-issuer">UAL Creative Computing Institute</div>
+                        <h3 class="cert-title">Introduction to UX and Accessible Design</h3>
+                        <p class="cert-desc">Course Certificate.</p>
+                        <a href="https://www.futurelearn.com/certificates/7nhg43c" target="_blank"
+                            class="cert-link">View Certificate <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="cert-card glass-panel fade-in delay-1">
+                        <img src="assets/futurelearn_logo.svg" alt="FutureLearn" class="cert-logo">
+                        <div class="cert-issuer">FutureLearn</div>
+                        <h3 class="cert-title">Digital Skills: Artificial Intelligence</h3>
+                        <p class="cert-desc">Course Certificate.</p>
+                        <a href="https://www.futurelearn.com/certificates/5tlil0i" target="_blank"
+                            class="cert-link">View Certificate <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- DataCamp -->
+                    <div class="cert-card glass-panel fade-in delay-2">
+                        <img src="assets/datacamp_logo.png"
+                            alt="DataCamp" class="cert-logo">
+                        <div class="cert-issuer">DataCamp</div>
+                        <h3 class="cert-title">Introduction to Natural Language Processing in Python</h3>
+                        <p class="cert-desc">Statement of Accomplishment.</p>
+                        <a href="https://www.datacamp.com/completed/statement-of-accomplishment/course/2f1c65c53da1e83634194c37301e7cb3cc307e2b"
+                            target="_blank" class="cert-link">View Certificate <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- edX -->
+                    <div class="cert-card glass-panel fade-in delay-3">
+                        <img src="assets/edx_logo.png"
+                            alt="edX" class="cert-logo">
+                        <div class="cert-issuer">edX</div>
+                        <h3 class="cert-title">Cloud Application Development Foundations</h3>
+                        <p class="cert-desc">Program Certificate.</p>
+                        <a href="https://credentials.edx.org/records/programs/shared/455d1215d231411593c7b26eaae7e353"
+                            target="_blank" class="cert-link">View Certificate <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- Cognitive Class -->
+                    <div class="cert-card glass-panel fade-in delay-3">
+                        <img src="assets/cognitive_class_logo.png"
+                            alt="Cognitive Class" class="cert-logo">
+                        <div class="cert-issuer">Cognitive Class</div>
+                        <h3 class="cert-title">Prompt Engineering for Everyone</h3>
+                        <p class="cert-desc">Course Certificate.</p>
+                        <a href="https://courses.cognitiveclass.ai/certificates/5db9b2a8a953449ea72cadaa7af1b7f8"
+                            target="_blank" class="cert-link">View Certificate <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="cert-card glass-panel fade-in delay-1">
+                        <img src="assets/cognitive_class_logo.png"
+                            alt="Cognitive Class" class="cert-logo">
+                        <div class="cert-issuer">Cognitive Class</div>
+                        <h3 class="cert-title">Deep Learning with TensorFlow</h3>
+                        <p class="cert-desc">Course Certificate.</p>
+                        <a href="https://courses.cognitiveclass.ai/certificates/f29a2a2c3364439a9304be3d48fcf1a4"
+                            target="_blank" class="cert-link">View Certificate <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="cert-card glass-panel fade-in delay-2">
+                        <img src="assets/cognitive_class_logo.png"
+                            alt="Cognitive Class" class="cert-logo">
+                        <div class="cert-issuer">Cognitive Class</div>
+                        <h3 class="cert-title">Data Visualization with Python</h3>
+                        <p class="cert-desc">Course Certificate.</p>
+                        <a href="https://courses.cognitiveclass.ai/certificates/adc1716930de42e2b7058ee8632cdc41"
+                            target="_blank" class="cert-link">View Certificate <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="cert-card glass-panel fade-in delay-3">
+                        <img src="assets/cognitive_class_logo.png"
+                            alt="Cognitive Class" class="cert-logo">
+                        <div class="cert-issuer">Cognitive Class</div>
+                        <h3 class="cert-title">Machine Learning with Python</h3>
+                        <p class="cert-desc">Course Certificate.</p>
+                        <a href="https://courses.cognitiveclass.ai/certificates/067fb198061241cc8b9142f1c4b9ba89"
+                            target="_blank" class="cert-link">View Certificate <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="cert-card glass-panel fade-in delay-1">
+                        <img src="assets/cognitive_class_logo.png"
+                            alt="Cognitive Class" class="cert-logo">
+                        <div class="cert-issuer">Cognitive Class</div>
+                        <h3 class="cert-title">Blockchain Essentials</h3>
+                        <p class="cert-desc">Course Certificate.</p>
+                        <a href="https://courses.cognitiveclass.ai/certificates/63f58882cc094ded91f1b1362b1a68d9"
+                            target="_blank" class="cert-link">View Certificate <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="cert-card glass-panel fade-in delay-2">
+                        <img src="assets/cognitive_class_logo.png"
+                            alt="Cognitive Class" class="cert-logo">
+                        <div class="cert-issuer">Cognitive Class</div>
+                        <h3 class="cert-title">SQL and Relational Databases 101</h3>
+                        <p class="cert-desc">Course Certificate.</p>
+                        <a href="https://courses.cognitiveclass.ai/certificates/dc7ab0945d844231bd996f1cc4758791"
+                            target="_blank" class="cert-link">View Certificate <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2026 Argha. Designed with passion.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

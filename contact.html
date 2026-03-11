@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .contact-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            border-radius: 12px;
+            transition: transform 0.3s;
+        }
+        .contact-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--neon-cyan);
+        }
+        .contact-icon {
+            font-size: 2rem;
+            color: var(--neon-purple);
+            background: rgba(188, 19, 254, 0.1);
+            padding: 1rem;
+            border-radius: 12px;
+        }
+        .contact-details h4 {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 0.3rem;
+        }
+        .contact-details p, .contact-details a {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+        .contact-details a:hover {
+            color: var(--neon-cyan);
+        }
+
+        .contact-form-container {
+            padding: 2.5rem;
+            border-radius: 20px;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-main);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: #fff;
+            font-family: var(--font-primary);
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--neon-cyan);
+            box-shadow: 0 0 10px rgba(0, 243, 255, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        textarea.form-control {
+            resize: vertical;
+            min-height: 150px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 900px) {
+            .contact-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <nav>
+                <a href="index.html" class="logo text-gradient">&lt;Argha /&gt;</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="certificates.html">Certificates</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-section fade-in">
+            <div class="container">
+                <h2 class="section-title">Get In <span class="text-gradient">Touch</span></h2>
+                <p style="text-align: center; color: var(--text-muted); max-width: 600px; margin: 0 auto; margin-bottom: 3rem;">
+                    I am currently open for full-time software engineering and ML/AI roles. If you have any questions or want to collaborate, feel free to reach out.
+                </p>
+
+                <div class="contact-layout">
+                    
+                    <!-- Contact Info -->
+                    <div class="contact-info fade-in delay-1">
+                        <div class="contact-card glass-panel">
+                            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <a href="mailto:hello@example.com">hello@example.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-card glass-panel">
+                            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="contact-details">
+                                <h4>Location</h4>
+                                <p>San Francisco, CA (Remote Open)</p>
+                            </div>
+                        </div>
+                        <div class="contact-card glass-panel">
+                            <div class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                            <div class="contact-details">
+                                <h4>LinkedIn</h4>
+                                <a href="#">linkedin.com/in/argha</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-container glass-panel fade-in delay-2">
+                        <form id="contactForm" onsubmit="event.preventDefault(); alert('Message feature to be integrated!');">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" class="form-control" placeholder="john@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" class="form-control" placeholder="Job Opportunity - ML Engineer" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" class="form-control" placeholder="Hello Argha, setup a time to chat..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary submit-btn">Send Message <i class="fa-solid fa-paper-plane" style="margin-left: 8px;"></i></button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2026 Argha. Designed with passion.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

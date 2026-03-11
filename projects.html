@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            border-color: var(--neon-purple);
+        }
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--glass-border);
+            transition: transform 0.5s ease;
+        }
+        .project-card:hover .project-image {
+            transform: scale(1.05);
+        }
+        .project-content {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            background: var(--bg-card);
+            z-index: 1; /* Keep above scaled image */
+        }
+        .project-title {
+            font-size: 1.4rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        .project-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+            line-height: 1.6;
+        }
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .tech-tag {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--neon-cyan);
+            border: 1px solid rgba(0, 243, 255, 0.2);
+        }
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: auto;
+        }
+        .project-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .project-links a.github-link {
+            color: var(--text-main);
+        }
+        .project-links a.github-link:hover {
+            color: var(--neon-cyan);
+        }
+        .project-links a.live-link {
+            color: var(--neon-purple);
+        }
+        .project-links a.live-link:hover {
+            color: #e58eff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <nav>
+                <a href="index.html" class="logo text-gradient">&lt;Argha /&gt;</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="certificates.html">Certificates</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-section fade-in">
+            <div class="container">
+                <h2 class="section-title">My <span class="text-gradient">Projects</span></h2>
+                <p style="text-align: center; color: var(--text-muted); max-width: 600px; margin: 0 auto;">
+                    A selection of my recent work focusing on machine learning models, intelligent web applications, and data engineering.
+                </p>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card glass-panel fade-in delay-1">
+                        <div style="overflow: hidden;">
+                            <!-- Placeholder for project image -->
+                            <div class="project-image" style="background: linear-gradient(45deg, #10101a, #1a1a2e); display: flex; align-items: center; justify-content: center;">
+                                <i class="fa-solid fa-robot" style="font-size: 4rem; color: rgba(255,255,255,0.1);"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">AI Content Generator</h3>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">OpenAI API</span>
+                                <span class="tech-tag">React</span>
+                            </div>
+                            <p class="project-desc">A full-stack application that leverages large language models to generate high-quality blog posts and marketing copy based on minimal user input prompts.</p>
+                            <div class="project-links">
+                                <a href="#" class="github-link"><i class="fa-brands fa-github"></i> Source</a>
+                                <a href="#" class="live-link"><i class="fa-solid fa-external-link-alt"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card glass-panel fade-in delay-2">
+                        <div style="overflow: hidden;">
+                             <div class="project-image" style="background: linear-gradient(45deg, #0a1f2c, #0d2818); display: flex; align-items: center; justify-content: center;">
+                                <i class="fa-solid fa-chart-line" style="font-size: 4rem; color: rgba(255,255,255,0.1);"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Predictive Sales Analytics</h3>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">Pandas</span>
+                            </div>
+                            <p class="project-desc">A deep learning model utilizing historical sales data to forecast future trends. Includes a comprehensive dashboard for data visualization and insight generation.</p>
+                            <div class="project-links">
+                                <a href="#" class="github-link"><i class="fa-brands fa-github"></i> Source</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card glass-panel fade-in delay-3">
+                        <div style="overflow: hidden;">
+                            <div class="project-image" style="background: linear-gradient(45deg, #2b0f2c, #1a0b1a); display: flex; align-items: center; justify-content: center;">
+                                <i class="fa-solid fa-eye" style="font-size: 4rem; color: rgba(255,255,255,0.1);"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Computer Vision Defect Detector</h3>
+                            <div class="tech-stack">
+                                <span class="tech-tag">PyTorch</span>
+                                <span class="tech-tag">OpenCV</span>
+                                <span class="tech-tag">Flask</span>
+                            </div>
+                            <p class="project-desc">An automated visual inspection system for manufacturing lines. Uses CNNs to identify minute defects in products on an assembly line in real-time.</p>
+                            <div class="project-links">
+                                <a href="#" class="github-link"><i class="fa-brands fa-github"></i> Source</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2026 Argha. Designed with passion.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
